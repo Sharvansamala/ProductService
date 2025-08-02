@@ -1,4 +1,4 @@
-package com.sharvan.Spring_ecom.entity;
+package com.sharvan.ProductService.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

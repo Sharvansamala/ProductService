@@ -1,7 +1,7 @@
-package com.sharvan.Spring_ecom.controller;
+package com.sharvan.ProductService.controller;
 
-import com.sharvan.Spring_ecom.dto.ProductDTO;
-import com.sharvan.Spring_ecom.service.IProductService;
+import com.sharvan.ProductService.dto.ProductDTO;
+import com.sharvan.ProductService.service.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
-package com.sharvan.Spring_ecom.repository;
+package com.sharvan.ProductService.repository;
 
-import com.sharvan.Spring_ecom.entity.CategoryEntity;
+import com.sharvan.ProductService.entity.CategoryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

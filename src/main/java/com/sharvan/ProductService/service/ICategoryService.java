@@ -1,7 +1,7 @@
-package com.sharvan.Spring_ecom.service;
+package com.sharvan.ProductService.service;
 
 
-import com.sharvan.Spring_ecom.dto.CategoryDTO;
+import com.sharvan.ProductService.dto.CategoryDTO;
 
 import java.util.List;
 

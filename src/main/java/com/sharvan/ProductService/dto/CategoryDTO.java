@@ -1,4 +1,4 @@
-package com.sharvan.Spring_ecom.dto;
+package com.sharvan.ProductService.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,13 +1,10 @@
-package com.sharvan.Spring_ecom.service;
+package com.sharvan.ProductService.service;
 
-import com.sharvan.Spring_ecom.dto.CategoryDTO;
-import com.sharvan.Spring_ecom.entity.CategoryEntity;
-import com.sharvan.Spring_ecom.mappers.CategoryMapper;
-import com.sharvan.Spring_ecom.repository.CategoryRepository;
+import com.sharvan.ProductService.dto.CategoryDTO;
+import com.sharvan.ProductService.entity.CategoryEntity;
+import com.sharvan.ProductService.mappers.CategoryMapper;
+import com.sharvan.ProductService.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

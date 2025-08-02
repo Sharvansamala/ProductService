@@ -1,8 +1,7 @@
-package com.sharvan.Spring_ecom.controller;
+package com.sharvan.ProductService.controller;
 
-import com.sharvan.Spring_ecom.dto.CategoryDTO;
-import com.sharvan.Spring_ecom.service.ICategoryService;
-import lombok.RequiredArgsConstructor;
+import com.sharvan.ProductService.dto.CategoryDTO;
+import com.sharvan.ProductService.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

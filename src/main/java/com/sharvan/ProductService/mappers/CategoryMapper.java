@@ -1,7 +1,7 @@
-package com.sharvan.Spring_ecom.mappers;
+package com.sharvan.ProductService.mappers;
 
-import com.sharvan.Spring_ecom.dto.CategoryDTO;
-import com.sharvan.Spring_ecom.entity.CategoryEntity;
+import com.sharvan.ProductService.dto.CategoryDTO;
+import com.sharvan.ProductService.entity.CategoryEntity;
 
 public class CategoryMapper {
 
