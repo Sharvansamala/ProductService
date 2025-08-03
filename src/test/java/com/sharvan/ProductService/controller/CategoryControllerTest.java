@@ -19,6 +19,7 @@ import java.util.List;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -62,5 +63,38 @@ public class CategoryControllerTest {
 
 
         verify(categoryService,times(1)).getAllCategories();
+    }
+
+    @Test
+    @DisplayName("GET /api/categories/{id} should return category by id")
+    void getCategoryById_shouldReturnCategoryById() throws Exception {
+        Long categoryId = 1L;
+        CategoryDTO categoryDTO = CategoryDTO.builder().id(categoryId).name("Electronics").build();
+
+        when(categoryService.getCategoryById(any(Long.class))).thenReturn(categoryDTO);
+
+        mockMvc.perform(get("/api/categories/{id}", categoryId)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(categoryId))
+                .andExpect(jsonPath("$.name").value("Electronics"));
+
+        verify(categoryService, times(1)).getCategoryById(categoryId);
+    }
+
+    @Test
+    void createCategory_shouldCreateCategory() throws Exception {
+        CategoryDTO createdCategory = CategoryDTO.builder().id(1L).name("Electronics").build();
+
+        when(categoryService.createCategory(any(CategoryDTO.class))).thenReturn(createdCategory);
+
+        mockMvc.perform(post("/api/categories")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"name\":\"Electronics\"}"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(1))
+                .andExpect(jsonPath("$.name").value("Electronics"));
+
+        verify(categoryService, times(1)).createCategory(any(CategoryDTO.class));
     }
 }
